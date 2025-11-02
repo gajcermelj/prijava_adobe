@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>		
+	<title>Ustvari račun</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="shortcut icon" type="Slike/icon" href="Slike/favicon.ico" />
+	<link rel="stylesheet" href="css/styleregister.css">
+</head>
+<body>
+
+<div class="main">
+	<div class="levo">
+		<div class="sre">
+			<img src="Slike/adobe_logo_white.svg" alt="adobe logo" class="logo" style="width: 100px; margin-bottom: 20px;">
+			<p class="pisave">Prijavite se ali ustvarite račun</p>
+		</div>
+	</div>
+	<div class="desno">
+		<div class="notranji">
+			<div class="header">
+				<p class="step">Korak 1 od 2</p>
+				<h1>Ustvari račun</h1>
+			</div>
+			
+			<div class="sredin">
+				<div class="social-buttons">
+					<div class="social-icon">
+						<a href="TEST.html" class="soci"><img src="Slike/google-social-icon.svg" alt="adobe logo" class="logo"></a>
+					</div>
+					<div class="social-icon">
+						<a href="TEST.html" class="soci"><img src="Slike/facebook-social-icon.svg" alt="adobe logo" class="logo"></a>
+					</div>
+					<div class="social-icon">
+						<a href="TEST.html" class="soci"><img src="Slike/apple-social-icon.svg" alt="adobe logo" class="logo"></a>
+					</div>
+					<div class="social-icon">
+						<a href="TEST.html" class="soci"><img src="Slike/microsoft-social-icon-round.svg" alt="adobe logo" class="logo"></a>
+					</div>
+					<div class="social-icon">
+						<a href="TEST.html" class="soci"><img src="Slike/line-social-icon-round.svg" alt="adobe logo" class="logo"></a>
+					</div>
+					<div class="social-icon">
+						<a href="TEST.html" class="soci"><img src="Slike/kakao-social-icon-round.svg" alt="adobe logo" class="logo"></a>
+					</div>
+				</div>
+				
+				<p>Ali</p>
+			</div>
+			
+			<div class="login">
+				<h3 style="font-size: 16px; font-weight: 600; margin-bottom: 20px;">Prijava z e-poštnim naslovom</h3>
+				<p style="color: #6D6D6D; font-size: 14px; margin-bottom: 20px;">Ali že imate račun? <a href="index.html">Prijavite se</a></p>
+				
+				<form action="/action_page.php">
+					<label for="email">E-poštni naslov</label><br>
+					<input type="text" id="email" name="email" value=""><br><br>
+					
+					<label for="password">Geslo</label><br>
+					<div class="password-toggle">
+						<input type="password" id="password" name="password" value="">
+						<span class="toggle-icon">
+							
+						</span>
+					</div>
+					<div class="password-requirements" id="passwordRequirements" style="display: none;">
+						<p style="font-size: 14px; font-weight: 600; margin: 12px 0 8px 0;">Ustvarite geslo, ki:</p>
+						<ul style="list-style: none; padding: 0; margin: 0;">
+							<li id="req-length" class="requirement">
+								<span class="req-icon">●</span>
+								<span>vsebuje vsaj toliko znakov: 8</span>
+							</li>
+							<li id="req-case" class="requirement">
+								<span class="req-icon">●</span>
+								<span>vsebuje tako male (a–z) kot tudi velike črke (A–Z)</span>
+							</li>
+							<li id="req-number" class="requirement">
+								<span class="req-icon">●</span>
+								<span>vsebuje vsaj eno številko (0–9) ali simbol</span>
+							</li>
+							<li id="req-email" class="requirement">
+								<span class="req-icon">●</span>
+								<span>ne vsebuje vašega e-poštnega naslova</span>
+							</li>
+							<li id="req-common" class="requirement">
+								<span class="req-icon">●</span>
+								<span>se ne uporablja pogosto</span>
+							</li>
+						</ul>
+					</div>
+					<br><br>
+					<input type="submit" value="Nadaljuj">
+				</form> 
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<span>Copyright © 2025 Adobe. All rights reserved.</span>
+	<a href="TEST.html" class="pogojiuporabe">Pogoji uporabe</a>  | 
+	<a href="TEST.html" class="piskoti">Nastavitve piškotkov</a>  | 
+	<a href="TEST.html" class="zasebnost">Zasebnost</a>  | 
+	<a href="TEST.html" class="osebnipod">Ne prodajajte osebnih podatkov ali jih delite z drugimi</a>
+</div>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const passwordInput = document.getElementById('password');
+	const emailInput = document.getElementById('email');
+	const requirementsDiv = document.getElementById('passwordRequirements');
+	const form = document.querySelector('form');
+	
+	// Pogosto uporabljena gesla
+	const commonPasswords = ['password', '12345678', 'qwerty', 'abc123', 'password123', 'admin123'];
+	
+	function checkPasswordRequirements(password, email) {
+		const emailLocal = email.split('@')[0].toLowerCase();
+		
+		const requirements = {
+			length: password.length >= 8,
+			case: /[a-z]/.test(password) && /[A-Z]/.test(password),
+			number: /[0-9]/.test(password) || /[^a-zA-Z0-9]/.test(password),
+			email: !(emailLocal && password.toLowerCase().includes(emailLocal)),
+			common: !commonPasswords.some(common => password.toLowerCase().includes(common))
+		};
+		
+		return requirements;
+	}
+	
+	function updateRequirementUI(requirements) {
+		// Preveri dolžino
+		const lengthReq = document.getElementById('req-length');
+		if (requirements.length) {
+			lengthReq.classList.add('valid');
+			lengthReq.classList.remove('invalid');
+			lengthReq.querySelector('.req-icon').textContent = '✓';
+		} else {
+			lengthReq.classList.remove('valid');
+			lengthReq.classList.add('invalid');
+			lengthReq.querySelector('.req-icon').textContent = '✗';
+		}
+		
+		// Preveri male in velike črke
+		const caseReq = document.getElementById('req-case');
+		if (requirements.case) {
+			caseReq.classList.add('valid');
+			caseReq.classList.remove('invalid');
+			caseReq.querySelector('.req-icon').textContent = '✓';
+		} else {
+			caseReq.classList.remove('valid');
+			caseReq.classList.add('invalid');
+			caseReq.querySelector('.req-icon').textContent = '✗';
+		}
+		
+		// Preveri številko ali simbol
+		const numberReq = document.getElementById('req-number');
+		if (requirements.number) {
+			numberReq.classList.add('valid');
+			numberReq.classList.remove('invalid');
+			numberReq.querySelector('.req-icon').textContent = '✓';
+		} else {
+			numberReq.classList.remove('valid');
+			numberReq.classList.add('invalid');
+			numberReq.querySelector('.req-icon').textContent = '✗';
+		}
+		
+		// Preveri e-poštni naslov
+		const emailReq = document.getElementById('req-email');
+		if (requirements.email) {
+			emailReq.classList.add('valid');
+			emailReq.classList.remove('invalid');
+			emailReq.querySelector('.req-icon').textContent = '✓';
+		} else {
+			emailReq.classList.remove('valid');
+			emailReq.classList.add('invalid');
+			emailReq.querySelector('.req-icon').textContent = '✗';
+		}
+		
+		// Preveri pogosta gesla
+		const commonReq = document.getElementById('req-common');
+		if (requirements.common) {
+			commonReq.classList.add('valid');
+			commonReq.classList.remove('invalid');
+			commonReq.querySelector('.req-icon').textContent = '✓';
+		} else {
+			commonReq.classList.remove('valid');
+			commonReq.classList.add('invalid');
+			commonReq.querySelector('.req-icon').textContent = '✗';
+		}
+	}
+	
+	passwordInput.addEventListener('input', function() {
+		if (passwordInput.value.length > 0) {
+			requirementsDiv.style.display = 'block';
+			const requirements = checkPasswordRequirements(passwordInput.value, emailInput.value);
+			updateRequirementUI(requirements);
+		} else {
+			requirementsDiv.style.display = 'none';
+		}
+	});
+	
+	form.addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		const password = passwordInput.value;
+		const email = emailInput.value;
+		
+		// Preveri če je e-poštni naslov prazen
+		if (email.length === 0) {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, vnesite e-poštni naslov.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			return;
+		}
+		
+		// Preveri če ima e-poštni naslov @ znak
+		if (!email.includes('@') || !email.includes('.')) {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, vnesite veljaven e-poštni naslov.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			return;
+		}
+		
+		// Preveri če je geslo prazno
+		if (password.length === 0) {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, vnesite geslo.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			return;
+		}
+		
+		requirementsDiv.style.display = 'block';
+		const requirements = checkPasswordRequirements(password, email);
+		updateRequirementUI(requirements);
+		
+		const allValid = requirements.length && requirements.case && 
+		                requirements.number && requirements.email && requirements.common;
+		
+		if (!allValid) {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Geslo ne izpolnjuje vseh zahtev.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			return;
+		}
+		
+		// Če je vse v redu, lahko nadaljujemo
+		Swal.fire({
+			title: "Odlično!",
+			text: "Račun je bil uspešno ustvarjen!",
+			icon: "success"
+		});
+		// form.submit(); // Odkomentiraj za pravo pošiljanje
+	});
+});
+</script>
+</html>

@@ -1,0 +1,206 @@
+*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			font-family: adobe-clean, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+		.main {
+			display: flex;
+			justify-content: center;
+			background-image: url("../Slike/backgrounds/background1.jpg");
+			align-items: center;  
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			flex: 1;
+			position: relative;
+			padding: 20px;
+		}
+		.desno{
+			height: auto;
+			width: 510px;
+			margin-bottom: 22px;
+			padding: 24px 55px 40px 55px;
+			background-color: white;
+			border-radius: 4px;
+		}
+		.levo{
+			height: 643px;
+			width: 510px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 40px;
+		}
+		.header {
+			margin-bottom: 20px;
+		}
+		.step-indicator {
+			font-size: 12px;
+			color: #6D6D6D;
+			margin-bottom: 15px;
+		}
+		.header h1 {
+			font-size: 28px;
+			font-weight: 600;
+			margin-bottom: 15px;
+		}
+		.header p {
+			color: #6D6D6D;
+			font-size: 14px;
+		}
+		.header a {
+			color: #0265dc;
+			text-decoration: none;
+		}
+		.header a:hover {
+			text-decoration: underline;
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.form-row {
+			display: flex;
+			gap: 15px;
+			margin-bottom: 20px;
+		}
+		.form-row .form-group {
+			flex: 1;
+			margin-bottom: 0;
+		}
+		label {
+			display: block;
+			font-size: 14px;
+			font-weight: 600;
+			margin-bottom: 8px;
+			color: #2c2c2c;
+		}
+		.label-with-info {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		}
+		.info-icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 16px;
+			height: 16px;
+			background-color: #0265dc;
+			color: white;
+			border-radius: 50%;
+			font-size: 11px;
+			font-weight: bold;
+			cursor: help;
+		}
+		input[type="text"],
+		input[type="email"],
+		select {
+			width: 100%;
+			height: 36px;
+			border-radius: 3.9px;
+			border: 1px solid #909090;
+			padding: 0 10px;
+			font-size: 14px;
+			font-family: inherit;
+		}
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		select:focus {
+			border-color: #147AF3;
+			outline: none;
+		}
+		input[type="text"]:hover,
+		input[type="email"]:hover,
+		select:hover {
+			border-color: #6D6D6D;
+		}
+		select {
+			cursor: pointer;
+			background-color: white;
+			appearance: none;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			background-position: right 10px center;
+			padding-right: 30px;
+		}
+		.checkbox-group {
+			margin: 20px 0;
+		}
+		.checkbox-label {
+			display: flex;
+			align-items: flex-start;
+			font-size: 13px;
+			color: #2c2c2c;
+			font-weight: normal;
+			cursor: pointer;
+		}
+		input[type="checkbox"] {
+			margin-right: 8px;
+			margin-top: 2px;
+			cursor: pointer;
+		}
+		.terms-text {
+			font-size: 13px;
+			color: #2c2c2c;
+			line-height: 1.5;
+			margin-top: 15px;
+		}
+		.terms-text a {
+			color: #0265dc;
+			text-decoration: none;
+		}
+		.terms-text a:hover {
+			text-decoration: underline;
+		}
+		.button-container {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 25px;
+		}
+		input[type="submit"] {
+			background-color: #0265dc;
+			color: white;
+			border: none;
+			padding: 8px 24px;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 15px;
+			font-weight: 500;
+		}
+		input[type="submit"]:hover {
+			background-color: #004491;
+		}
+		.footer{
+			color: grey;
+			padding: 12px;
+			background-color: white;
+			text-align: center;
+			width: 100%;
+			font-size: 12px;
+			margin-top: auto;
+		}
+		.footer a {
+			color: #2c2c2c;
+			text-decoration: none;
+		}
+		.footer a:hover {
+			color: #0265dc;
+			text-decoration: underline;
+		}
+		@media (max-width: 1290px) {
+			.levo {
+				display: none;
+			}
+			.desno {
+				margin: 0 auto;
+			}
+			.main {
+				justify-content: center;
+			}
+		}

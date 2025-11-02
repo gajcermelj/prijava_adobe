@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>		
+	<title>Ustvari račun</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="css/styleregister-drugidel.css" type="text/css" media="all" />	
+	</head>
+<body>
+<div class="main">
+	<div class="levo">
+		<div class="sre">
+			<img src="Slike/adobe_logo_white.svg" alt="adobe logo" class="logo">
+			<p class="pisave">Prijavite se ali ustvarite račun</p>
+		</div>
+	</div>
+<div class="desno">
+	<div class="notranji">
+		<div class="header">
+			<div class="step-indicator">Korak 2 od 2</div>
+			<h1>Ustvari račun</h1>
+			<p>Ali že imate račun? <a href="index.html">Prijavite se</a></p>
+		</div>
+			
+		<form action="/action_page.php">
+				<div class="form-row">
+					<div class="form-group">
+						<label for="ime">Ime</label>
+						<input type="text" id="ime" name="ime" value="">
+					</div>
+					<div class="form-group">
+						<label for="priimek">Priimek</label>
+						<input type="text" id="priimek" name="priimek" value="">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="label-with-info">
+						Datum rojstva
+						<span class="info-icon" title="Potrebujemo vaš datum rojstva">i</span>
+					</label>
+					<div class="form-row">
+						<div class="form-group">
+							<label for="mesec">Mesec</label>
+							<select id="mesec" name="mesec">
+								<option value="">Izberite...</option>
+								<option value="1">Januar</option>
+								<option value="2">Februar</option>
+								<option value="3">Marec</option>
+								<option value="4">April</option>
+								<option value="5">Maj</option>
+								<option value="6">Junij</option>
+								<option value="7">Julij</option>
+								<option value="8">Avgust</option>
+								<option value="9">September</option>
+								<option value="10">Oktober</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="leto">Leto</label>
+							<input type="text" id="leto" name="leto" value="" placeholder="">
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="drzava">Država/regija</label>
+					<select id="drzava" name="drzava">
+						<option value="si">Slovenija</option>
+						<option value="hr">Hrvaška</option>
+						<option value="at">Avstrija</option>
+						<option value="it">Italija</option>
+					</select>
+				</div>
+				
+				<div class="terms-text">
+					<strong>Družina podjetij Adobe</strong> me lahko po <a href="#">prilagojeni e-pošti</a> obvešča o izdelkih in storitvah. Za več podrobnosti ali če želite ustaviti pošiljanje, si lahko kadar koli ogledate naš <a href="#">Pravilnik o zasebnosti</a>.
+				</div>
+				
+				<div class="checkbox-group">
+					<label class="checkbox-label">
+						<input type="checkbox" name="newsletter" id="newsletter">
+						<span>Obveščajte me po e-pošti</span>
+					</label>
+				</div>
+				
+				<div class="terms-text">
+					S klikom na »Ustvari račun« se strinjam, da sem prebral(-a) in sprejmam <a href="#">Pogoji uporabe</a> in <a href="#">Pravilnik o zasebnosti</a>.
+				</div>
+				
+				<div class="button-container">
+					<input type="submit" value="Ustvarite račun">
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<span>Copyright © 2025 Adobe. All rights reserved.</span>
+	<a href="#">Pogoji uporabe</a> | 
+	<a href="#">Nastavitve piškotkov</a> | 
+	<a href="#">Zasebnost</a> | 
+	<a href="#">Ne prodajajte osebnih podatkov ali jih delite z drugimi</a>
+</div>
+
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const form = document.getElementById('registerForm');
+	const imeInput = document.getElementById('ime');
+	const priimekInput = document.getElementById('priimek');
+	const mesecSelect = document.getElementById('mesec');
+	const letoInput = document.getElementById('leto');
+	const drzavaSelect = document.getElementById('drzava');
+	
+	form.addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		// Preveri ime
+		if (imeInput.value.trim() === '') {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, vnesite vaše ime.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			imeInput.focus();
+			return;
+		}
+		
+		// Preveri priimek
+		if (priimekInput.value.trim() === '') {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, vnesite vaš priimek.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			priimekInput.focus();
+			return;
+		}
+		
+		// Preveri mesec rojstva
+		if (mesecSelect.value === '') {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, izberite mesec rojstva.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			mesecSelect.focus();
+			return;
+		}
+		
+		// Preveri leto rojstva
+		if (letoInput.value.trim() === '') {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, vnesite leto rojstva.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			letoInput.focus();
+			return;
+		}
+		
+		// Preveri veljavnost leta
+		const leto = parseInt(letoInput.value);
+		const trenutnoLeto = new Date().getFullYear();
+		
+		if (isNaN(leto) || leto < 1900 || leto > trenutnoLeto) {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Prosimo, vnesite veljavno leto rojstva (med 1900 in " + trenutnoLeto + ").",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			letoInput.focus();
+			return;
+		}
+		
+		// Preveri starost (vsaj 13 let)
+		const starost = trenutnoLeto - leto;
+		if (starost < 13) {
+			Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Za uporabo storitev Adobe morate biti stari vsaj 13 let.",
+				footer: '<a href="#">Zakaj imam to težavo?</a>'
+			});
+			return;
+		}
+		
+		// Če je vse v redu
+		Swal.fire({
+			title: "Odlično!",
+			text: "Račun je bil uspešno ustvarjen!",
+			icon: "success",
+			confirmButtonText: "V redu"
+		}).then((result) => {
+			if (result.isConfirmed) {
+				// Tukaj lahko preusmeriš uporabnika
+				// window.location.href = 'success.html';
+				// Ali odkomentiraj za pravo pošiljanje:
+				// form.submit();
+			}
+		});
+	});
+	
+	// Dovoli samo številke v polju za leto
+	letoInput.addEventListener('input', function(e) {
+		this.value = this.value.replace(/[^0-9]/g, '');
+	});
+});
+</script>
+</html>
