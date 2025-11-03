@@ -9,6 +9,19 @@ body{
 	display: flex;
     flex-direction: column; 
 }
+@font-face {
+    font-family: 'AdobeClean';
+    src: url('../AdobeClean/AdobeClean-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AdobeClean';
+    src: url('../AdobeClean/AdobeClean-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
 .main {
   display: flex;
   justify-content: center;
@@ -106,7 +119,7 @@ input[type="submit"]:hover{
 .login {
 	margin-bottom: 40px;
 }
-label {
+.label {
 	display: block;
 	font-size: 14px;
 	font-weight: 600;
@@ -168,3 +181,4 @@ label {
         justify-content: center;
     }
 }
+
