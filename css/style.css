@@ -57,7 +57,14 @@ body{
 	align-items: center;
 	padding: 40px;
 }
-input[type="text"], input[type="password"]{
+.vnos{
+	font-family: 'AdobeClean';
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	color: #464646;
+}
+input[type="email"], input[type="geslo"]{
 	width: 100%;
 	padding-left: 9px;
 	height: 32px;
@@ -75,11 +82,11 @@ input[type="submit"] {
 	float: right;
 	font-weight: 500;
 }
-input[type="text"]:focus, input[type="password"]:focus{
+input[type="email"]:focus, input[type="geslo"]:focus{
 	border-color: #147AF3;
 	outline: none;
 }
-input[type="text"]:hover, input[type="password"]:hover{
+input[type="email"]:hover, input[type="geslo"]:hover{
 	border-color: #6D6D6D;
 }
 input[type="submit"]:hover{
@@ -184,6 +191,7 @@ input[type="submit"]:hover{
         justify-content: center;
     }
 }
+
 
 
 
