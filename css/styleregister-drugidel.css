@@ -10,7 +10,19 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+@font-face {
+    font-family: 'AdobeClean';
+    src: url('../AdobeClean/AdobeClean-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'AdobeClean';
+    src: url('../AdobeClean/AdobeClean-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
 .main {
 	display: flex;
 	justify-content: center;
@@ -26,25 +38,34 @@ body {
 
 .levo {
 	height: 643px;
-	width: 510px;
+	width: 540px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 40px;
 }
 
 .sre {
-	text-align: center;
+	text-align: left;
 }
 
-.logo {
+.header .logo {
 	width: 100px;
 	margin-bottom: 20px;
 }
 
+.moznost{
+	font-family: 'AdobeClean';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: black;
+}
+
 .pisave {
 	color: white;
-	font-size: 28px;
+	font-size: 20px;
+	font-family: 'AdobeClean';
 	font-weight: 300;
 	line-height: 1.4;
 }
@@ -58,6 +79,13 @@ body {
 	border-radius: 4px;
 }
 
+.svetla{
+	font-family: 'AdobeClean';
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 16px;
+	color: #464646;
+}
 .header {
 	margin-bottom: 20px;
 }
@@ -103,11 +131,11 @@ body {
 	margin-bottom: 0;
 }
 
-.label {
+label {
 	display: block;
 	font-size: 14px;
 	font-weight: 600;
-	margin-bottom: 8px;
+	margin-bottom: 5px;
 	color: #2c2c2c;
 }
 
@@ -132,15 +160,19 @@ body {
 }
 
 input[type="text"],
-input[type="email"],
-select {
+input[type="email"]{
 	width: 100%;
-	height: 36px;
-	border-radius: 3.9px;
+	padding-left: 9px;
+	height: 32px;
+	border-radius: 3.9px; 
 	border: 1px solid #909090;
-	padding: 0 10px;
-	font-size: 14px;
-	font-family: inherit;
+	background-size: 24px 18px;
+	background-color: white;
+	padding-right: 40px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	background-repeat: no-repeat;
+	background-position: right 10px center;
 }
 
 input[type="text"]:focus,
@@ -156,7 +188,18 @@ select:hover {
 	border-color: #6D6D6D;
 }
 
+.drz{
+	width: 103px;
+	border-color: white;
+}
+
 select {
+	width: 100%;
+	height: 36px;
+	border-radius: 3.9px;
+	border: 1px solid #909090;
+	padding: 0 10px;
+	font-size: 14px;
 	cursor: pointer;
 	background-color: white;
 	appearance: none;
@@ -166,6 +209,9 @@ select {
 	padding-right: 30px;
 }
 
+.drz:hover{
+	border-color: white;
+}
 .checkbox-group {
 	margin: 20px 0;
 }
@@ -190,10 +236,6 @@ input[type="checkbox"] {
 	color: #2c2c2c;
 	line-height: 1.5;
 	margin-top: 15px;
-}
-
-.pog_uporabe a:hover {
-	text-decoration: underline;
 }
 
 .button-container {

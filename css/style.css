@@ -44,16 +44,16 @@ body{
 	
 }
 .sre {
-	text-align: center;
+	text-align: left;
 }
 .glava{
 	font-family: adobe-clean;
 }
 .levo{
 	height: 643px;
-	width: 510px;
+	width: 540px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	padding: 40px;
 }
@@ -64,12 +64,19 @@ body{
 	line-height: 16px;
 	color: #464646;
 }
-input[type="email"], input[type="geslo"]{
+input[type="email"], input[type="password"]{
 	width: 100%;
 	padding-left: 9px;
 	height: 32px;
-	border-radius: 3.9px;
+	border-radius: 3.9px; 
 	border: 1px solid #909090;
+	background-size: 24px 18px;
+	background-color: white;
+	padding-right: 40px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	background-repeat: no-repeat;
+	background-position: right 10px center;
 }
 input[type="submit"] {
 	background-color: #0265dc;
@@ -78,28 +85,29 @@ input[type="submit"] {
 	padding: 8px 24px;
 	border-radius: 20px;
 	cursor: pointer;
+	font-family: 'AdobeClean';
+	font-weight: 700;
 	font-size: 15px;
 	float: right;
-	font-weight: 500;
-}
-input[type="email"]:focus, input[type="geslo"]:focus{
-	border-color: #147AF3;
-	outline: none;
-}
-input[type="email"]:hover, input[type="geslo"]:hover{
-	border-color: #6D6D6D;
+	
 }
 input[type="submit"]:hover{
 	background-color: #004491;
 }
+input[type="email"]:focus, input[type="password"]:focus{
+	border-color: #147AF3;
+	outline: none;
+}
+input[type="email"]:hover, input[type="password"]:hover{
+	border-color: #6D6D6D;
+}
+
 .pisave{
 	color: white;
-	font-size: 28px;
+	font-size: 20px;
+	font-family: 'AdobeClean';
 	font-weight: 300;
 	line-height: 1.4;
-}
-.hjc{
-	align-items: center;
 }
 .header {
 	margin-bottom: 30px;
@@ -129,11 +137,11 @@ input[type="submit"]:hover{
 .login {
 	margin-bottom: 40px;
 }
-.label {
+.besedilo1 {
 	display: block;
 	font-size: 14px;
 	font-weight: 600;
-	margin-bottom: 8px;
+	margin-bottom: 5px;
 	color: #2c2c2c;
 }
 .sredin{
@@ -148,6 +156,7 @@ input[type="submit"]:hover{
 	border: 1px solid #FFFFFF;
 	border-radius: 100px;
 	cursor: pointer;
+	gap: 14px;
 	font-size: 14px;
 	font-weight: 500;
 	background-color: white;
@@ -191,7 +200,6 @@ input[type="submit"]:hover{
         justify-content: center;
     }
 }
-
 
 
 

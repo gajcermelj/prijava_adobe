@@ -5,6 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="Slike/icon" href="Slike/favicon.ico" />
+	<script src="script/index.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />		
 </head>
@@ -25,20 +26,21 @@
 				<p>Ali ste nov uporabnik? <a href="register.html">Ustvari račun</a></p>
 			</div>
 			<div class="login">
-			<form action="/action_page.php">
-				<label for="email"><p class="vnos">E-poštni naslov</p></label><br>
-				<input type="email" id="fname" name="fname" value="" required><br>
-				<label for="geslo"><p class="vnos">Geslo</p></label><br>
-				<input type="geslo" id="lname" name="lname" value="" required><br><br>
+			<form id="loginForm">
+				<label class="besedilo1" for="email"><p class="vnos">E-poštni naslov</p></label>
+				<input type="email" id="email" name="email" value="" required><br><br>
+				<label class="besedilo1" for="geslo"><p class="vnos">Geslo</p></label>
+				<input type="password" id="password" name="password" value="" required><br><br>
 				<input type="submit" value="Nadaljuj">
 			</form> 
 			</div>
 			<div class="sredin">
 				<p>Ali</p>
-				<a href="#" class="soci"><img src="Slike/google-social-icon.svg" alt="adobe logo" class="logo">Nadaljujte z Googlom</a>
-				<a href="#" class="soci"><img src="Slike/facebook-social-icon.svg" alt="adobe logo" class="logo">Nadaljujte z facebookom</a>
-				<a href="#" class="soci"><img src="Slike/apple-social-icon.svg" alt="adobe logo" class="logo">Nadaljujte z Applom</a>
+				<a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?client_id=1014431251553-kq98rctnjtv76ag4ulrfkem43b74poni.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Ffederatedid-na1.services.adobe.com%2Ffederated%2FfromOIDC&state=AUhtTtypVzreKWjVpH6ioWNQdiywQyvfVi5PN-POSS403Ns-Y42GnVml-PTgf_nopk7bAR2Q0sJa&scope=email%20openid%20profile&response_type=code&service=lso&o2v=2&flowName=GeneralOAuthFlow" class="soci"><img src="Slike/google-social-icon.svg" alt="adobe logo" class="logo">Nadaljujte z Googlom</a>
+				<a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=531310443646320&kid_directed_site=0&app_id=531310443646320&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv12.0%2Fdialog%2Foauth%3Fclient_id%3D531310443646320%26redirect_uri%3Dhttps%253A%252F%252Ffederatedid-na1.services.adobe.com%252Ffederated%252FfromOIDC%26state%3DAdtvO3hfe2SgqUcwbr8RPuHBnGR7c9o6csic0abznW8bSI3NSsaZWXOMjI_IMEQGPsOogGcj5U_2%26scope%3Demail%2Bpublic_profile%26response_type%3Dcode%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Ddc862f79-02c2-4df0-b5e9-3847b28b7ef8%26tp%3Dunspecified&cancel_url=https%3A%2F%2Ffederatedid-na1.services.adobe.com%2Ffederated%2FfromOIDC%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DAdtvO3hfe2SgqUcwbr8RPuHBnGR7c9o6csic0abznW8bSI3NSsaZWXOMjI_IMEQGPsOogGcj5U_2%23_%3D_&display=page&locale=en_US&pl_dbl=0" class="soci"><img src="Slike/facebook-social-icon.svg" alt="adobe logo" class="logo">Nadaljujte z facebookom</a>
+				<a href="https://appleid.apple.com/auth/authorize?client_id=com.adobe.services.adobeid-na1.web&redirect_uri=https://federatedid-na1.services.adobe.com/federated/fromOIDC&state=ASyhBS4tPu4YhjlP2PDmhpsMioH9s3t_t8ZZ_axweoqg93X0Dy_ZDOJwOYpfzynTOhs_TNi8bQtM&scope=email%20name&response_type=code&response_mode=form_post" class="soci"><img src="Slike/apple-social-icon.svg" alt="adobe logo" class="logo">Nadaljujte z Applom</a>
 				<p><a href="#">Več moznosti za prijavo</a></p>
+				<p><a href="#">Pomoč pri prijavi</a></p>
 			</div>
 			
 		</div>
@@ -51,23 +53,5 @@
 	<a href="#" class="zasebnost">Zasebnost</a>  | 
 	<a href="#" class="osebnipod">Ne prodajajte osebnih podatkov ali jih delite z drugimi</a>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-	const form=document.querySelector('form');
-	
-	form.addEventListener('submit', function(e) {
-		e.preventDefault();
-			Swal.fire({
-				title: "Odlično!",
-				text: "Prijava je uspešna!",
-				icon: "success",
-				confirmButtonText: "V redu"
-			})
-	})
-});
-</script>
-
-
-
 </body>
 </html>
