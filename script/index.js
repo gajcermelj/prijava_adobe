@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	const email = document.getElementById('email');
 	const password = document.getElementById('password');
 	
+	const whiteLogoImg = document.querySelector('img[src="Slike/adobe_logo_white.svg"]');
+	
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
 		
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       Swal.fire({
         icon: 'success',
         title: 'Prijava uspešna!',
-        text: 'Dobrodošel nazaj'
+        text: 'Dobrodošel nazaj',
 		confirmButtonColor: '#0265dc'
       });
     } else{
@@ -36,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	});
 });
-function prikaziAlert(event) {
+function sporocilo(event) {
     event.preventDefault();
     Swal.fire({
         icon: 'info',
