@@ -137,6 +137,11 @@ input[type="email"]:hover, input[type="password"]:hover{
 .login {
 	margin-bottom: 40px;
 }
+.sredin a{
+	font-family: 'AdobeClean';
+	font-weight: 700;
+	font-size: 700;
+}
 .besedilo1 {
 	display: block;
 	font-size: 14px;

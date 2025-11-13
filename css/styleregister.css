@@ -100,9 +100,10 @@ input[type="submit"] {
 	padding: 8px 24px;
 	border-radius: 20px;
 	cursor: pointer;
+	font-family: 'AdobeClean';
+	font-weight: 700;
 	font-size: 15px;
 	float: right;
-	font-weight: 500;
 }
 
 input[type="email"]:focus, 
@@ -219,11 +220,11 @@ label {
 .footer {
 	color: grey;
 	padding: 12px;
-	width: 100%;
 	background-color: white;
-	margin-top: auto;
 	text-align: center;
 	width: 100%;
+	font-size: 12px;
+	margin-top: auto;
 }
 
 .footer a {

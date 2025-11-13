@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				icon: "warning",
 				title: "Oops...",
 				text: "Geslo ne izpolnjuje vseh zahtev.",
+				confirmButtonColor: '#0265dc'
 			});
 			return;
 		}

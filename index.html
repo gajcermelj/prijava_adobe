@@ -5,7 +5,6 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="Slike/icon" href="Slike/favicon.ico" />
-	<script src="script/index.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />		
 </head>
@@ -17,6 +16,9 @@
 			<img src="Slike/adobe_logo_white.svg" alt="adobe logo" class="logo">
 			<p class="pisave">Prijavite se ali ustvarite račun</p>
 		</div>
+		<map name="workmap">
+			<area shape="circle" coords="538,497,3" alt="o" onclick="sporocilo(event)">
+		</map>
 	</div>
 	<div class="desno">
 		<div class="notranji">
@@ -53,5 +55,6 @@
 	<a href="#" class="zasebnost">Zasebnost</a>  | 
 	<a href="#" class="osebnipod">Ne prodajajte osebnih podatkov ali jih delite z drugimi</a>
 </div>
+<script src="script/index.js"></script>
 </body>
 </html>
