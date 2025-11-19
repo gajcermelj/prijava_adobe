@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
 	const zahteve = document.getElementById('zahteve');
 	const form = document.querySelector('form');
 	
+	const togglePassword = document.getElementById('togglePassword');
+	togglePassword.addEventListener('click', function() {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        togglePassword.src = 'Slike/odprte_oci.svg';
+    } else {
+        passwordInput.type = 'password';
+        togglePassword.src = 'Slike/zaprte_oci.svg';
+    }
+});
+	
 	const commonPasswords = ['password', '12345678', 'qwerty', 'abc123', 'password123', 'admin123'];
 	
 	function checkPasswordRequirements(password, email) {
@@ -19,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 		return requirements;
 	}
-	
+		
+
+		
 	function updateRequirementUI(requirements) {
 		const lengthReq = document.getElementById('req-length');
 		if (requirements.length) {

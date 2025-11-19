@@ -5,6 +5,19 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	const whiteLogoImg = document.querySelector('img[src="Slike/adobe_logo_white.svg"]');
 	
+	const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', function() {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        togglePassword.src = 'Slike/odprte_oci.svg';
+    } else {
+        passwordInput.type = 'password';
+        togglePassword.src = 'Slike/zaprte_oci.svg';
+    }
+});
+
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
 		

@@ -61,6 +61,25 @@ body {
 	align-items: center;
 	padding: 40px;
 }
+.password-container {
+    position: relative;
+    display: flex;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.eye-icon {
+	top: 6px;
+    position: absolute;
+	left: 368px;
+    right: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
 .pisave{
 	color: white;
 	font-size: 20px;
@@ -89,6 +108,7 @@ input[type="password"] {
 	padding-right: 40px;
 	padding-top: 3px;
 	padding-bottom: 5px;
+	font-family: 'AdobeClean';
 	background-repeat: no-repeat;
 	background-position: right 10px center;
 }
@@ -119,6 +139,21 @@ input[type="password"]:hover {
 
 input[type="submit"]:hover {
 	background-color: #004491;
+}
+input[type="text"]{
+	width: 100%;
+	padding-left: 9px;
+	height: 32px;
+	border-radius: 3.9px; 
+	font-family: 'AdobeClean';
+	border: 1px solid #909090;
+	background-size: 24px 18px;
+	background-color: white;
+	padding-right: 40px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	background-repeat: no-repeat;
+	background-position: right 10px center;
 }
 .header {
 	margin-bottom: 30px;
@@ -198,23 +233,6 @@ label {
 	margin: 20px 0;
 	color: #6D6D6D;
 	font-size: 14px;
-}
-
-.password-toggle {
-	position: relative;
-}
-
-.password-toggle input {
-	padding-right: 40px;
-}
-
-.toggle-icon {
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	cursor: pointer;
-	color: #6D6D6D;
 }
 
 .footer {
