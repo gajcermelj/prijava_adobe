@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 	const form = document.querySelector('#loginForm');
 	const email = document.getElementById('email');
-	const password = document.getElementById('password');
-	
-	const whiteLogoImg = document.querySelector('img[src="Slike/adobe_logo_white.svg"]');
+	const password = document.getElementById('password');	
 	
 	const togglePassword = document.getElementById('togglePassword');
 	const passwordInput = document.getElementById('password');
@@ -20,11 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	form.addEventListener('submit', function(e) {
 		e.preventDefault();
-		
-	email.style.border = '1px solid #909090';
-	password.style.border = '1px solid #909090';
-	email.style.backgroundImage='none';
-	password.style.backgroundImage='none';
 	
 	 
 	 const pravilniEmail="joze.kovac@gmail.com";
@@ -38,10 +31,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		confirmButtonColor: '#0265dc'
       });
     } else{
-      email.style.border = '1px solid red';
-	  email.style.backgroundImage='url("../Slike/oznaka.svg")';
-	  password.style.border = '1px solid red';
-	  password.style.backgroundImage='url("../Slike/oznaka.svg")';
       Swal.fire({
         icon: 'error',
         title: 'Napaka pri prijavi',

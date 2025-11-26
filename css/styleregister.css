@@ -96,6 +96,16 @@ body {
 	color: #464646;
 }
 
+.credits {
+    position: absolute;
+    top: 330px;
+    right: 1133px;
+    border: transparent;
+    cursor: pointer;
+	background: transparent;
+	height: 12px;
+	width: 12px;
+}
 input[type="email"], 
 input[type="password"] {
 	width: 100%;
@@ -212,7 +222,6 @@ label {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	transition: border-color 0.2s;
 	background-color: white;
 }
 
@@ -225,6 +234,23 @@ label {
 	height: 24px;
 }
 
+.login h3{
+	font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.login p{
+	color: #6D6D6D;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.login a {
+	color: #0265dc;
+	text-decoration: none;
+}
+.login a:hover {
+	text-decoration: underline;
+}
 .sredin {
 	text-align: center;
 }

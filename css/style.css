@@ -83,6 +83,16 @@ body{
     width: 100px;
     height: 100px;
 }
+.credits {
+    position: absolute;
+    top: 370px;
+    right: 1133px;
+    border: transparent;
+    cursor: pointer;
+	background: transparent;
+	height: 12px;
+	width: 12px;
+}
 input[type="email"], input[type="password"]{
 	width: 100%;
 	padding-left: 9px;
@@ -95,7 +105,6 @@ input[type="email"], input[type="password"]{
 	font-family: 'AdobeClean';
 	padding-top: 3px;
 	padding-bottom: 5px;
-	background-repeat: no-repeat;
 	background-position: right 10px center;
 }
 input[type="submit"] {
@@ -133,7 +142,6 @@ input[type="text"]{
 	padding-top: 3px;
 	padding-bottom: 5px;
 	font-family: 'AdobeClean';
-	background-repeat: no-repeat;
 	background-position: right 10px center;
 }
 .pisave{
@@ -183,6 +191,18 @@ input[type="text"]{
 	font-weight: 600;
 	margin-bottom: 5px;
 	color: #2c2c2c;
+}
+.beseda1{
+	color: #6D6D6D;
+	font-size: 14px;
+	color: #0265dc;
+}
+.beseda2{
+	float: left;
+	margin-top: 20px;
+	color: #6D6D6D;
+	font-size: 14px;
+	color: #0265dc;
 }
 .sredin{
 	text-align: center;

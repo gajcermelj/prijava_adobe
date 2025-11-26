@@ -125,3 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.location.href = 'register-drugidel.html';
 	});
 });
+function sporocilo(event) {
+    event.preventDefault();
+    Swal.fire({
+        icon: 'info',
+        title: 'Credit',
+        text: 'Gaj Čermelj',
+        confirmButtonColor: '#0265dc'
+    });
+}

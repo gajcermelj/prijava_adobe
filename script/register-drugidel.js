@@ -11,7 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
         title: 'Registracija je uspešna!',
         text: 'Dobrodošli',
 		confirmButtonColor: '#0265dc'
-      });
+      }).then(()=>{
 	  window.location.href = 'index.html';
+	});
 });
 });
+function sporocilo(event) {
+    event.preventDefault();
+    Swal.fire({
+        icon: 'info',
+        title: 'Credit',
+        text: 'Gaj Čermelj',
+        confirmButtonColor: '#0265dc'
+    });
+}
