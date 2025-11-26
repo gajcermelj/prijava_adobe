@@ -48,7 +48,7 @@ Open link: https://github.com/gajcermelj.github.io/prijava_adobe/
 
 ## 📄 License
 
-This project includes a LICENSE file - please refer to it for detailed licensing information.
+This project includes a AGPL-3.0 license
 
 ## ℹ️ Note
 
