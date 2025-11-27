@@ -47,5 +47,9 @@ function sporocilo(event) {
         title: 'Credit',
         text: 'Gaj Čermelj',
         confirmButtonColor: '#0265dc'
-    });
+	}).then=>{
+		window.location.href = 'https://www.adobe.com/si/creativecloud.html?mv=search&mv=search&mv2=paidsearch&sdid=D4P81NYZ&ef_id=Cj0KCQiAiqDJBhCXARIsABk2kSkqjspK2DNaL0mAekq0C4fZH1Gvq5XINz_GdMePCN_pNJqzaOOHlQQaAphoEALw_wcB:G:s&s_kwcid=AL!3085!3!759434162045!e!!g!!adobe!22689283866!180587571825&gad_source=1&gad_campaignid=22689283866&gbraid=0AAAAADraYsIJ3pPuPQRT_BmvXer5TQUwI&gclid=Cj0KCQiAiqDJBhCXARIsABk2kSkqjspK2DNaL0mAekq0C4fZH1Gvq5XINz_GdMePCN_pNJqzaOOHlQQaAphoEALw_wcB';
+});
+});
+
 }
