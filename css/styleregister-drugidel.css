@@ -161,8 +161,8 @@ body {
 
 .credits{
     position: absolute;
-    top: 338px;
-    right: 1133px;
+    top: 500px;
+    right: 1324px;
     border: transparent;
     cursor: pointer;
 	background: transparent;
@@ -173,7 +173,7 @@ input[type="text"],
 input[type="email"]{
 	width: 100%;
 	padding-left: 9px;
-	height: 32px;
+	height: 36px;
 	border-radius: 3.9px; 
 	border: 1px solid #909090;
 	background-size: 24px 18px;
@@ -217,14 +217,14 @@ select{
 	background-image: url("../Slike/dropdown.svg");
 	background-repeat: no-repeat;
 	background-position: right 10px center;
-	padding-right: 30px;
+	padding-right: 40px;
 }
 
 .drz:hover{
 	border-color: white;
 }
 .checkbox-group{
-	margin: 20px 0;
+	margin: 20px;
 }
 
 .checkbox-label{

@@ -2,11 +2,11 @@
 
 A static website that replicates Adobe's login and registration interface in Slovenian language.
 
-## Project Description
+## 📋 Project Description
 
 This project contains a static webpage that accurately mimics the user interface for logging in and registering on the Adobe platform. The page is customized for Slovenian users with all text translated into Slovenian.
 
-## Features
+## 🚀 Features
 
 - **Login** - Page for existing users to sign in
 - **Registration** - New account creation process in two steps
@@ -14,20 +14,20 @@ This project contains a static webpage that accurately mimics the user interface
 - **Responsive Design** - Adapts to different screen sizes and devices
 - **Slovenian Localization** - Complete interface in Slovenian language
 
-## Project Structure
+## 🗂️ Project Structure
 
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - **HTML5** - Page structure and content
 - **CSS3** - Styling and responsive design
 - **JavaScript** - Client-side functionality
 
-## Getting Started
+## 🚀 Getting Started
 
 Open link: https://github.com/gajcermelj.github.io/prijava_adobe/
 
-## Pages Overview
+## 📱 Pages Overview
 
 
 ### Login Page (`index.html`)
@@ -46,7 +46,7 @@ Open link: https://github.com/gajcermelj.github.io/prijava_adobe/
   
   ![Login Screenshot](Slike/registracija-drugidel.png)
 
-## License
+## 📄 License
 
 This project includes a AGPL-3.0 license
 
