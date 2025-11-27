@@ -1,4 +1,4 @@
-#<div align="center">Adobe Login/Registration Clone</div>
+# <div align="center">Adobe Login/Registration Clone</div>
 
 A static website that replicates Adobe's login and registration interface in Slovenian language.
 
