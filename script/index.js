@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	 const pravilniEmail="joze.kovac@gmail.com";
 	 const pravilnoGeslo="Joze123!";
 	 
-	 if (email.value === pravilniEmail && password.value === pravilnoGeslo) {
+	 if(email.value===pravilniEmail&&password.value===pravilnoGeslo){
       Swal.fire({
         icon: 'success',
         title: 'Prijava uspešna!',
@@ -52,6 +52,7 @@ function sporocilo(event) {
 	})
 });
 }
+
 
 
 
