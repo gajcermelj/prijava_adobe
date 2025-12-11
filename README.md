@@ -26,7 +26,7 @@ This project contains a static webpage that accurately mimics the user interface
 
 
 ### Login Page (`index.html`)
-- Email/password login form
+- Email/password login form - for successful login inser email("joze.kovac@gmail.com") and password("Joze123!")
 - Social media login options (Google, Facebook, Apple)
 - "Create account" link for new users
   
